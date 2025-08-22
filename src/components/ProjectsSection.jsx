@@ -6,6 +6,7 @@ const projects = [
     title: "StudyPal",
     description: "An AI-powered web app that generates flashcards from study notes to help students learn more efficiently.",
     image: "/projects/project3.png",
+    tags: ["TypeScript", "CSS", "JavaScript", "Tailwind CSS", "React", "Next.js"],
     githubUrl: "https://github.com/k4vinliu/StudyPal",
   },
   {
@@ -14,6 +15,7 @@ const projects = [
     description:
       "An AI-powered teammate-matching app that intelligently connects hackathon participants into compatible teams based on their skills, interests, and personalities.",
     image: "/projects/project4.png",
+    tags: ["TypeScript", "JavaScript", "React Native"],
     githubUrl: "https://github.com/ajalfonso/HackPods",
   },
   {
@@ -22,6 +24,7 @@ const projects = [
     description:
       "An interactive online forum where students can ask math questions, get detailed answers, and engage in peer learning through over 500 discussion threads moderated by volunteer tutors.",
     image: "/projects/project5.png",
+    tags: ["HTML", "CSS", "JavaScript", "MySQL"],
     githubUrl: "https://github.com/k4vinliu/linkeducations",
   },
   {
@@ -30,6 +33,7 @@ const projects = [
     description:
       "A lightweight Chrome extension that instantly generates accurate MLA citations for any webpage with a single click, streamlining research for students and writers.",
     image: "/projects/project1.png",
+    tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Vue.js"],
     githubUrl: "https://github.com/k4vinliu/QuickCite",
   },
   {
@@ -38,6 +42,7 @@ const projects = [
     description:
       "A fun, incremental simulator game inspired by Cookie Clicker, where players click to earn power points and unlock upgrades that accelerate progress in an endlessly satisfying loop.",
     image: "/projects/project6.png",
+    tags: ["Python"],
     githubUrl: "https://github.com/k4vinliu/ICS2O1-CPT-Punch-Wall-Simulator",
   },
   {
@@ -46,6 +51,7 @@ const projects = [
     description:
       "A minimalist Chrome extension that helps you stay focused by letting you save, organize, and revisit important links without getting distracted by endless tabs.",
     image: "/projects/project2.png",
+    tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Vue.js"],
     githubUrl: "https://github.com/k4vinliu/FocusLinks",
   },
 ];
@@ -66,7 +72,8 @@ export const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col"
+              className="group bg-card rounded-lg overflow-hidden shadow-md hover:animate-[cardGlow_1.5s_infinite] transition-shadow duration-300 flex flex-col"
+
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -81,9 +88,20 @@ export const ProjectsSection = () => {
                   <h3 className="text-xl font-semibold mb-1">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
+                  <p className="text-muted-foreground text-sm mb-2">
                     {project.description}
                   </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, index) => (
+  <span
+    key={index}
+    className="bg-muted text-xs text-foreground px-3 py-1 rounded-full font-medium border border-border shadow-sm"
+  >
+    {tag}
+  </span>
+))}
+
+                  </div>
                 </div>
 
                 <div className="flex space-x-3 mt-auto">
