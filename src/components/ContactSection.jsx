@@ -69,7 +69,7 @@ export const ContactSection = () => {
           {/* Right column: GIF */}
           <div className="flex justify-center md:justify-center mt-6 md:mt-10">
             <img
-              src="/assets/coding2.gif"
+              src="/assets/coding4.gif"
               alt="Floating Computer Guy"
               className="w-[200px] sm:w-[240px] md:w-[320px] h-auto z-10 animate-[float2_4s_ease-in-out_infinite,twinkle_6s_ease-in-out_infinite]"
             />
