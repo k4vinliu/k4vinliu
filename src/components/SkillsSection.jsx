@@ -55,15 +55,16 @@ export const SkillsSection = () => {
 
         {/* Technical Languages */}
         <div className="mb-16">
-          <h3 className="text-2xl font-semibold">Technical Languages</h3>
+          <h3 className="text-2xl font-semibold text-center">Technical Languages</h3>
           <div className="flex flex-wrap justify-center gap-8 mt-8">
             {technicalLanguages.map((skill, index) => (
               <div
                 key={index}
-                className="w-27 h-27 bg-card shadow-md flex items-center justify-center text-5xl text-primary hover:scale-110 transition-transform"
+                className="w-27 h-27 bg-card shadow-md flex flex-col items-center justify-center text-primary hover:scale-110 transition-transform"
                 title={skill.name}
               >
-                {skill.icon}
+                <div className="text-5xl">{skill.icon}</div>
+                <span className="mt-2 text-sm font-medium text-center">{skill.name}</span>
               </div>
             ))}
           </div>
@@ -71,15 +72,16 @@ export const SkillsSection = () => {
 
         {/* Tools and Frameworks */}
         <div>
-          <h3 className="text-2xl font-semibold">Tools and Frameworks</h3>
+          <h3 className="text-2xl font-semibold text-center">Tools and Frameworks</h3>
           <div className="flex flex-wrap justify-center gap-8 mt-8">
             {toolsAndFrameworks.map((skill, index) => (
               <div
                 key={index}
-                className="w-27 h-27 bg-card shadow-md flex items-center justify-center text-5xl text-primary hover:scale-110 transition-transform"
+                className="w-27 h-27 bg-card shadow-md flex flex-col items-center justify-center text-primary hover:scale-110 transition-transform"
                 title={skill.name}
               >
-                {skill.icon}
+                <div className="text-5xl">{skill.icon}</div>
+                <span className="mt-2 text-sm font-medium text-center">{skill.name}</span>
               </div>
             ))}
           </div>
